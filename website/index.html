@@ -369,6 +369,119 @@
         line-height: 1.65;
       }
 
+      .setup-steps {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 45px;
+      }
+
+      .setup-step {
+        position: relative;
+        min-height: 245px;
+        padding: 24px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        background: var(--surface);
+      }
+
+      .setup-step::after {
+        position: absolute;
+        right: -18px;
+        bottom: -38px;
+        color: rgba(123, 241, 178, 0.045);
+        content: attr(data-step);
+        font-size: 8rem;
+        font-weight: 800;
+        line-height: 1;
+        pointer-events: none;
+      }
+
+      .step-number {
+        display: grid;
+        width: 31px;
+        height: 31px;
+        place-items: center;
+        border: 1px solid var(--line-bright);
+        border-radius: 9px;
+        background: rgba(123, 241, 178, 0.07);
+        color: var(--accent);
+        font: 0.72rem ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .setup-step h3 {
+        margin: 28px 0 10px;
+        font-size: 1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .setup-step p {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.65;
+      }
+
+      code.inline {
+        padding: 2px 6px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #080c12;
+        color: #c9d5e4;
+        font: 0.78rem ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .phone-platforms {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .phone-platform {
+        display: flex;
+        gap: 16px;
+        padding: 22px 24px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .phone-platform strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 0.92rem;
+      }
+
+      .phone-platform p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.6;
+      }
+
+      .phone-icon {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 10px;
+        background: rgba(115, 182, 255, 0.08);
+        color: var(--accent-2);
+        font-size: 1rem;
+      }
+
+      .setup-note {
+        margin: 16px 0 0;
+        color: #758397;
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+
       .quickstart {
         display: grid;
         grid-template-columns: 0.8fr 1.2fr;
@@ -466,6 +579,15 @@
           grid-template-columns: 1fr;
         }
 
+        .setup-steps,
+        .phone-platforms {
+          grid-template-columns: 1fr;
+        }
+
+        .setup-step {
+          min-height: 210px;
+        }
+
         .quickstart {
           gap: 30px;
           padding: 26px;
@@ -499,6 +621,7 @@
           </a>
           <div class="nav-links">
             <a href="#features">Features</a>
+            <a href="#phone">Phone setup</a>
             <a href="#start">Get started</a>
             <a
               class="github-link"
@@ -592,6 +715,62 @@
             <p>Agents use your local Claude Code and Codex clients. Loop-Eng never proxies logins.</p>
           </article>
         </div>
+      </section>
+
+      <section class="shell" id="phone">
+        <p class="section-kicker">Phone setup</p>
+        <h2>From terminal to home screen in four steps.</h2>
+        <p class="section-copy">
+          Your Mac keeps running the agents. Your phone becomes a secure viewer, controller, and
+          notification surface over your private Tailscale network.
+        </p>
+
+        <div class="setup-steps">
+          <article class="setup-step" data-step="1">
+            <span class="step-number">01</span>
+            <h3>Join the same tailnet</h3>
+            <p>Install Tailscale on your Mac and phone, then sign into the same Tailscale account.</p>
+          </article>
+          <article class="setup-step" data-step="2">
+            <span class="step-number">02</span>
+            <h3>Start Loop-Eng</h3>
+            <p>
+              In a safe project directory, run <code class="inline">loop</code> or
+              <code class="inline">node apps/cli/src/main.mjs</code> from source.
+            </p>
+          </article>
+          <article class="setup-step" data-step="3">
+            <span class="step-number">03</span>
+            <h3>Scan the pairing QR</h3>
+            <p>The terminal prints a QR containing the one-time pairing URL. Scan it with your phone.</p>
+          </article>
+          <article class="setup-step" data-step="4">
+            <span class="step-number">04</span>
+            <h3>Install and enable push</h3>
+            <p>Add the PWA to your home screen, open it from its new icon, and enable notifications.</p>
+          </article>
+        </div>
+
+        <div class="phone-platforms">
+          <div class="phone-platform">
+            <span class="phone-icon" aria-hidden="true">⌁</span>
+            <div>
+              <strong>iPhone / iPad</strong>
+              <p>Open the QR link in Safari → Share → Add to Home Screen → open Loop → Enable notifications.</p>
+            </div>
+          </div>
+          <div class="phone-platform">
+            <span class="phone-icon" aria-hidden="true">◇</span>
+            <div>
+              <strong>Android</strong>
+              <p>Open the QR link in Chrome → menu → Install app → open Loop → allow notifications.</p>
+            </div>
+          </div>
+        </div>
+        <p class="setup-note">
+          On iOS, web push requires iOS 16.4 or newer and the app must be launched from its home-screen icon.
+          Keep Tailscale connected when opening Loop remotely.
+        </p>
       </section>
 
       <section class="shell" id="start">
