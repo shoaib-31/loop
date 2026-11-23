@@ -35,7 +35,7 @@ const { threadToTurns } = await import("./engines/codex.mjs");
 
 const RICH = "aaaaaaaa-1111-4111-8111-111111111111";
 const SMALL = "bbbbbbbb-2222-4222-8222-222222222222";
-const OURS = "cccccccc-3333-4333-8333-333333333333"; // entrypoint sdk-ts = a Loop-Eng run
+const OURS = "cccccccc-3333-4333-8333-333333333333"; // entrypoint sdk-ts = a Loop run
 
 let pass = 0, fail = 0;
 const ok = (name, cond, extra = "") => {

@@ -1,6 +1,6 @@
 # Contributor guidance
 
-Loop-Eng is a local-first remote control for Claude Code and Codex. The daemon owns agent
+Loop is a local-first remote control for Claude Code and Codex. The daemon owns agent
 processes and normalized session history; the terminal UI and PWA are clients of its HTTP and
 WebSocket API.
 

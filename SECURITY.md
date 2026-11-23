@@ -1,8 +1,8 @@
 # Security
 
-Loop-Eng is intended for a trusted, single-user machine. Coding agents can execute commands and
+Loop is intended for a trusted, single-user machine. Coding agents can execute commands and
 modify files inside the directory used to launch a session. Treat that directory as a permission
-boundary: never launch Loop-Eng from your home directory, a credentials directory, or a worktree
+boundary: never launch Loop from your home directory, a credentials directory, or a worktree
 whose secrets and deployment access the agent should not have.
 
 ## Network exposure

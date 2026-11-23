@@ -153,7 +153,7 @@ export class Engine {
    *
    * `dir` scopes to one project when given. Engines should exclude their own
    * programmatic/headless sessions by default: on this machine 66 of 179 Claude sessions
-   * were ours, and a picker listing Loop-Eng's own runs back at the user is noise.
+   * were ours, and a picker listing Loop's own runs back at the user is noise.
    *
    * @param {{dir?:string|null, cursor?:string|null, limit?:number}} _opts
    * @returns {Promise<{conversations:ForeignConversation[], nextCursor:string|null,

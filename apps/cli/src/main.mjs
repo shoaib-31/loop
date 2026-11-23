@@ -34,7 +34,7 @@ import { PASTE_ON, PASTE_OFF } from "./tui/text-input.mjs";
 import { parseArgs } from "./args.mjs";
 
 /** Where `loop update` fetches the installer from. Overridable for testing a fork. */
-const REPO = process.env.LOOP_REPO ?? "shoaib-31/loop-eng";
+const REPO = process.env.LOOP_REPO ?? "shoaib-31/loop";
 
 const c = {
   dim: (s) => `\x1b[2m${s}\x1b[0m`,

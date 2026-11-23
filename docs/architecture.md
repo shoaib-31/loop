@@ -1,6 +1,6 @@
 # Architecture
 
-Loop-Eng has three product surfaces around one local daemon:
+Loop has three product surfaces around one local daemon:
 
 - The daemon owns provider processes, normalized sessions, persistence, notifications, and the
   authenticated HTTP/WebSocket API.
@@ -15,7 +15,7 @@ model. Native provider conversation identifiers are opaque and never treated as 
 
 ## Cross-engine handoff
 
-A handoff is not a vendor-session conversion. Loop-Eng creates a fresh target-provider session in
+A handoff is not a vendor-session conversion. Loop creates a fresh target-provider session in
 the same working directory and supplies recent normalized turns plus a compact Git worktree
 snapshot. Hidden reasoning is excluded, context is bounded, and the original session remains
 available. Handoffs are allowed only when the source is idle and has no unanswered decision.

@@ -225,7 +225,7 @@ async function withAppServer(fn, { timeoutMs = 20_000 } = {}) {
 
   try {
     await request("initialize", {
-      clientInfo: { name: "loop-eng", title: "Loop-Eng", version: "0.0.1" },
+      clientInfo: { name: "loop-eng", title: "Loop", version: "0.0.1" },
       capabilities: { experimentalApi: true, requestAttestation: false },
     });
     child.stdin.write(JSON.stringify({ jsonrpc: "2.0", method: "initialized", params: {} }) + "\n");
@@ -522,7 +522,7 @@ export class CodexEngine {
     // `experimentalApi` is REQUIRED for collaborationMode/list and the question tool;
     // without it those methods answer -32600 "requires experimentalApi capability".
     await this._request("initialize", {
-      clientInfo: { name: "loop-eng", title: "Loop-Eng", version: "0.0.1" },
+      clientInfo: { name: "loop-eng", title: "Loop", version: "0.0.1" },
       capabilities: { experimentalApi: true, requestAttestation: false },
     });
     this._notify("initialized", {});

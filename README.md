@@ -1,9 +1,9 @@
-# Loop-Eng
+# Loop
 
 Run Claude Code or Codex on your Mac, follow the work from another device, and continue a
 session in the other provider without losing the useful context.
 
-Loop-Eng is local-first: agents run on your machine, in the working directory you choose. A
+Loop is local-first: agents run on your machine, in the working directory you choose. A
 terminal dashboard and installable PWA connect to the local daemon. Tailscale Serve provides the
 recommended tailnet-only path from your phone; public Funnel exposure is explicit and temporary.
 
@@ -25,7 +25,7 @@ recommended tailnet-only path from your phone; public Funnel exposure is explici
 - Claude Code and/or Codex installed and authenticated
 - Tailscale on the computer and phone for remote access and push notifications
 
-Loop-Eng does not proxy provider credentials. Each engine uses the corresponding locally
+Loop does not proxy provider credentials. Each engine uses the corresponding locally
 installed and authenticated coding-agent client.
 
 ## Run from source

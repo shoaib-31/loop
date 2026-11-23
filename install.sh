@@ -1,5 +1,5 @@
 #!/bin/sh
-# Loop-Eng installer — `curl -fsSL <url>/install.sh | sh`
+# Loop installer — `curl -fsSL <url>/install.sh | sh`
 #
 # Installs one self-contained executable:
 #
@@ -17,7 +17,7 @@
 
 set -eu
 
-REPO="${LOOP_REPO:-shoaib-31/loop-eng}"
+REPO="${LOOP_REPO:-shoaib-31/loop}"
 VERSION="${LOOP_VERSION:-latest}"
 PREFIX="${LOOP_PREFIX:-$HOME/.local}"
 BIN_DIR="$PREFIX/bin"
@@ -99,7 +99,7 @@ trap cleanup EXIT INT TERM
 say "downloading $asset ($tag)…"
 fetch "$url" "$tmp" || die "download failed: $url
   If this release doesn't exist yet, build from source instead:
-    git clone https://github.com/$REPO && cd loop-eng && npm install && bun apps/cli/build.mjs"
+    git clone https://github.com/$REPO && cd loop && npm install && bun apps/cli/build.mjs"
 
 # A GitHub 404 page is HTML and would install as a 9KB "binary" that fails cryptically.
 if [ "$(head -c 2 "$tmp")" = "<!" ] || [ "$(wc -c < "$tmp")" -lt 1000000 ]; then

@@ -849,7 +849,7 @@ export function Dashboard({
   const waiting = sessions.filter((s) => s.pending).length;
 
   // In the import view the prompt is a filter. Matching the CWD as well as the title is the
-  // point: "the conversation about the daemon" and "the conversations in Loop-Eng" are both
+  // point: "the conversation about the daemon" and "the conversations in Loop" are both
   // things you'd type, and only one of them is a title.
   const convRows = useMemo(() => {
     const q = inImport ? input.trim().toLowerCase() : "";

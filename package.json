@@ -1,11 +1,11 @@
 {
-  "name": "loop-eng",
+  "name": "loop",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shoaib-31/loop-eng.git"
+    "url": "git+https://github.com/shoaib-31/loop.git"
   },
   "engines": {
     "node": ">=22"

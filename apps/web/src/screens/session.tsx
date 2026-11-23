@@ -211,7 +211,7 @@ export function SessionScreen() {
 
       <Body ref={scrollRef} onScroll={onScroll} className="pt-3">
         {/* IMPORTED (PROBLEM 20). Said once, at the top, because it changes what typing here
-            MEANS: the reply is appended to a conversation that also exists outside Loop-Eng,
+            MEANS: the reply is appended to a conversation that also exists outside Loop,
             and will be there next time it's opened on the Mac. `truncated` is called out for
             the same reason — the agent has the whole thing even though this view doesn't. */}
         {adoptedFrom ? (

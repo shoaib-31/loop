@@ -1,5 +1,5 @@
 #!/bin/bash
-# Loop-Eng v0 notify hook.
+# Loop v0 notify hook.
 #
 # Fires on Claude Code hook events (Notification, Stop, ...) and:
 #   1. Logs the full event (for the idle_prompt empirical test) to NOTIFY_LOG.

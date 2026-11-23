@@ -1,4 +1,4 @@
-// Basic terminal TUI client for the Loop-Eng daemon. It is JUST A CLIENT of the
+// Basic terminal TUI client for the Loop daemon. It is JUST A CLIENT of the
 // same protocol the phone app speaks (start · stream · decide · reply) — it does
 // NOT own the session (the daemon does). That's the north-star invariant: start
 // here, walk away, continue on the phone, close this — the session lives on.

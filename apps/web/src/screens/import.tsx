@@ -93,7 +93,7 @@ export function ImportScreen() {
   }, [load]);
 
   // Matching the DIRECTORY as well as the title is the point: "the daemon conversation" and
-  // "everything in Loop-Eng" are both things you'd search for, and only one is a title.
+  // "everything in Loop" are both things you'd search for, and only one is a title.
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return rows;

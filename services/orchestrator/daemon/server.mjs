@@ -1,4 +1,4 @@
-// Loop-Eng daemon — the north-star engine host. Owns Claude sessions via the SDK
+// Loop daemon — the north-star engine host. Owns Claude sessions via the SDK
 // and exposes ONE protocol (start · stream · decide · reply) that BOTH clients
 // (terminal TUI + phone app) speak. The web API client and shared types live in
 // apps/web/src/lib/api.ts and apps/web/src/lib/types.ts:
