@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover lets content sit under the notch; the safe-area env()
+         padding in index.css does the real spacing work. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+
+    <!-- ===== iOS home-screen install: the load-bearing part =====
+         Not cosmetic. iOS only exposes PushManager to an INSTALLED PWA, so
+         without apple-mobile-web-app-capable there is no push at all, and
+         therefore no product (docs/architecture.md). -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Loop" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- iOS ignores the manifest icons for the home-screen icon and uses this. -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/icon-192.png" />
+    <meta name="theme-color" content="#0a0a0b" />
+
+    <title>Loop</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

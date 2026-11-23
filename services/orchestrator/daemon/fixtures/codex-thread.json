@@ -1,0 +1,88 @@
+{
+  "id": "01a01a32-7800-7950-896f-21d7c7b75046",
+  "sessionId": "01a01a32-7800-7950-896f-21d7c7b75046",
+  "forkedFromId": null,
+  "parentThreadId": null,
+  "name": null,
+  "preview": "I want a fruit for a snack. Use your judgement.",
+  "ephemeral": false,
+  "modelProvider": "openai",
+  "cwd": "/tmp/loop-fixture",
+  "createdAt": 1785000000,
+  "updatedAt": 1785000600,
+  "recencyAt": 1785000600,
+  "status": { "type": "idle" },
+  "turns": [
+    {
+      "id": "turn-1",
+      "status": "completed",
+      "startedAt": 1785000000,
+      "completedAt": 1785000120,
+      "error": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "item-u1",
+          "clientId": null,
+          "content": [{ "type": "text", "text": "I want a fruit for a snack.", "text_elements": [] }]
+        },
+        {
+          "type": "reasoning",
+          "id": "item-r1",
+          "summary": ["Deciding which fruit to suggest"],
+          "content": []
+        },
+        {
+          "type": "commandExecution",
+          "id": "item-c1",
+          "command": "ls /pantry",
+          "cwd": "/tmp/loop-fixture",
+          "aggregatedOutput": "mango\nguava\n",
+          "exitCode": 0
+        },
+        {
+          "type": "agentMessage",
+          "id": "item-a1",
+          "text": "Which do you prefer: Mango or Guava?",
+          "phase": null,
+          "memoryCitation": null
+        }
+      ]
+    },
+    {
+      "id": "turn-2",
+      "status": "completed",
+      "startedAt": 1785000500,
+      "completedAt": 1785000600,
+      "error": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "item-u2",
+          "clientId": null,
+          "content": [
+            { "type": "text", "text": "Guava please, see", "text_elements": [] },
+            { "type": "mention", "name": "notes.md", "path": "/tmp/loop-fixture/notes.md" }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "item-a2",
+          "text": "You picked Guava.",
+          "phase": null,
+          "memoryCitation": null
+        }
+      ]
+    },
+    {
+      "id": "turn-3",
+      "status": "completed",
+      "startedAt": null,
+      "completedAt": null,
+      "error": null,
+      "items": [
+        { "type": "userMessage", "id": "item-u3", "clientId": null, "content": [{ "type": "localImage", "path": "/tmp/loop-fixture/shot.png" }] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@loop-eng/orchestrator",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Runs Claude Code headless, captures decision events (AskUserQuestion via canUseTool) and routes them to a human for a reply.",
+  "scripts": {
+    "capture": "node capture.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.308",
+    "qrcode": "^1.5.4",
+    "web-push": "^3.6.7"
+  }
+}

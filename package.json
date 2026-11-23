@@ -1,0 +1,26 @@
+{
+  "name": "loop-eng",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoaib-31/loop-eng.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "description": "Remote agent runner + loop-engineering platform. Watch coding agents work from your phone; get pinged when they need a decision.",
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "test": "node tools/run-tests.mjs",
+    "test:agent": "node tools/run-tests.mjs --agent",
+    "capture": "npm run capture --workspace @loop-eng/orchestrator",
+    "web": "npm run dev --workspace @loop-eng/web",
+    "build:pwa": "npm run build --workspace @loop-eng/web",
+    "daemon": "node services/orchestrator/daemon/server.mjs"
+  }
+}

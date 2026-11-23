@@ -1,0 +1,10 @@
+# Copy this file to notify.config and fill in your private ntfy topic.
+# notify.config is gitignored because the topic is effectively a secret:
+# anyone who knows it can read (and publish to) your notifications.
+
+# A private, hard-to-guess topic. Subscribe to this exact topic in the ntfy app.
+NTFY_TOPIC="loop-eng-CHANGEME"
+
+# Optional overrides:
+# NTFY_SERVER="https://ntfy.sh"
+# NOTIFY_LOG="$SCRIPT_DIR/notify.log"

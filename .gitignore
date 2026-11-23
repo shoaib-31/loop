@@ -1,0 +1,35 @@
+node_modules/
+*.log
+.DS_Store
+.env
+.env.*
+dist/
+build/
+
+# Private operator notes and local agent configuration. The public repository contains
+# sanitized architecture and contributor documentation instead.
+personal/
+.claude/
+.codex/
+.aws/
+.npmrc
+
+# Credentials and machine identity files must never enter Git history.
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# v0 notify hook: private topic + local log
+services/orchestrator/hooks/notify.config
+services/orchestrator/hooks/notify.log
+
+# web-push VAPID keypair — the server's push identity. Private; regenerating it
+# invalidates every existing subscription, so it's cached on disk, never committed.
+.vapid.json
+.subs.json
+
+# TS incremental build cache
+*.tsbuildinfo

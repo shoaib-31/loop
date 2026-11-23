@@ -1,0 +1,20 @@
+{
+  "name": "@loop-eng/cli",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "The `loop` command — starts/attaches the daemon, exposes it over Tailscale, prints the pairing QR, and drops into the TUI.",
+  "bin": {
+    "loop": "./src/main.mjs"
+  },
+  "scripts": {
+    "start": "node src/main.mjs",
+    "build": "bun build.mjs"
+  },
+  "dependencies": {
+    "ink": "^7.1.1",
+    "react": "^19.2.8",
+    "ws": "^8.18.0"
+  }
+}

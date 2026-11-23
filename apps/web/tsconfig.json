@@ -1,0 +1,7 @@
+{
+  // Two projects on purpose. App code is typed for the browser and the service
+  // worker with NO Node types in scope; only vite.config.ts gets @types/node.
+  // Mixing them would let a Node global typecheck inside browser code.
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+}
